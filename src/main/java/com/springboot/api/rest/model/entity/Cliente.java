@@ -25,6 +25,12 @@ public class Cliente implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date createAt;
 
+    @PrePersist
+    public void prePersist(){
+        createAt = new Date();
+    }
+
+
 }
 // POJO un clase simple de Java para acceder y modificar
 
